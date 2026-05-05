@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Partners | Farm Teens Uganda</title>
+  <meta name="description" content="Meet our partners and collaborators working together to empower Ugandan youth through sustainable agriculture and innovative farming practices.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- Updated Font Awesome (includes the 'x' brand) -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Partners Page - unblurred background with sharp image visible
+       Scoped to .partners-page so it only affects the partners page */
+    .partners-page {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+        url('images/partnerna.jpg');
+      background-size: cover, cover;
+      background-position: center center, center center;
+      background-attachment: fixed, fixed;
+      min-height: 100vh;
+    }
+
+    /* Make all sections on partners page transparent to show background image (except hero) */
+    .partners-page .partners-section,
+    .partners-page .partner-grid-section,
+    .partners-page .footer-cta {
+      background: transparent;
+    }
+
+    /* Make section containers transparent */
+    .partners-page .partner-grid,
+    .partners-page .partners-grid,
+    .partners-page .cta-content {
+      background: transparent;
+    }
+
+    /* Make partner cards transparent */
+    .partners-page .partner-card {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Make all text white with shadows on partners page sections */
+    .partners-page .partners-section h2,
+    .partners-page .partners-section p,
+    .partners-page .partner-grid-section h2,
+    .partners-page .partner-grid-section p,
+    .partners-page .partner-card h3,
+    .partners-page .partner-card p,
+    .partners-page .footer-cta h2,
+    .partners-page .footer-cta p,
+    .partners-page .section-header h2,
+    .partners-page .section-header p {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      color: #ffffff;
+    }
+
+    /* Partners Hero Glow Effect */
+    .partners-hero h1 {
+      text-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.6),
+        0 0 40px rgba(34, 197, 94, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.4),
+        0 0 80px rgba(34, 197, 94, 0.3),
+        0 3px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .partners-hero p {
+      text-shadow: 
+        0 0 15px rgba(34, 197, 94, 0.5),
+        0 0 30px rgba(34, 197, 94, 0.3),
+        0 0 45px rgba(34, 197, 94, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="partners-page">
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo: image + text for accessibility and branding -->
+    <a href="index.html" class="navbar-logo" aria-label="Farm Teens UG home">
+      <img src="images/logo.png" alt="Farm Teens UG logo" class="logo-img" />
+      <span class="logo-text" data-variants="Farm Teens Uganda|Teens Driving Change" aria-live="polite">Farm Teens UG</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="partners.html" class="active">Partners</a>
+      <a href="blog.html">Blog</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="navbar-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="partners.html" class="active">Partners</a>
+    <a href="blog.html">Blog</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <button class="mobile-nav-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+  </div>
+</nav>
+
+<!-- PARTNERS HERO -->
+<section class="partners-hero">
+  <div class="hero-overlay"></div>
+  <div class="partners-hero-content">
+    <h1>Building Strong <span class="highlight">Collaborations</span></h1>
+    <p>
+      We work with leading organizations, corporations, and institutions
+      to create comprehensive support systems for Ugandan youth in agriculture.
+      Together, we're building a sustainable future for the next generation.
+    </p>
+    <div class="partner-stats">
+      <div class="stat">
+        <h3>45+</h3>
+        <p>Active Partners</p>
+      </div>
+      <div class="stat">
+        <h3>12</h3>
+        <p>Sectors</p>
+      </div>
+      <div class="stat">
+        <h3>$2M+</h3>
+        <p>Combined Investment</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Partners Stats -->
+    <section class="section">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-card reveal">
+            <div class="kpi">
+              <div class="num" data-target="45">0</div>
+              <div class="kpi-label">Active Partners</div>
+            </div>
+          </div>
+          <div class="stat-card reveal reveal-delay-1">
+            <div class="kpi">
+              <div class="num" data-target="15">0</div>
+              <div class="kpi-label">Communities Represented</div>
+            </div>
+          </div>
+          <div class="stat-card reveal reveal-delay-2">
+            <div class="kpi">
+              <div class="num" data-target="6">0</div>
+              <div class="kpi-label">Years of Collaboration</div>
+            </div>
+          </div>
+          <div class="stat-card reveal reveal-delay-3">
+            <div class="kpi">
+              <div class="num" data-target="25">0</div>
+              <div class="kpi-label">Joint Projects</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  <section class="container" style="margin-top:18px">
+      <h2 class="reveal">Collaborations</h2>
+      <div class="grid-3" style="margin-top:14px">
+        <div class="card reveal"><h3>Local Government</h3><p>Partnering with district authorities to scale programs regionally.</p></div>
+        <div class="card reveal"><h3>NGOs & Donors</h3><p>Support for training, funding and outreach initiatives.</p></div>
+        <div class="card reveal"><h3>Academic Institutions</h3><p>Research and training partnerships with agricultural colleges.</p></div>
+      </div>
+
+      <div style="margin-top:30px" class="reveal">
+        <h3>Our Donors Include</h3>
+        <ul style="color:var(--muted);">
+          <li>International development partners</li>
+          <li>Private foundations</li>
+          <li>Corporate CSR programs</li>
+        </ul>
+      </div>
+    </section>
+
+<!-- BECOME A PARTNER -->
+<section class="become-partner">
+  <div class="container">
+    <div class="partner-cta">
+      <h2>Become a Partner</h2>
+      <p>
+        Join our network of collaborators working to transform Uganda's agricultural sector.
+        Whether you're a corporation, NGO, academic institution, or government agency,
+        there are meaningful ways to contribute to our mission.
+      </p>
+
+      <div class="partnership-options" id="partnership-types">
+        <div class="option">
+          <h3>💰 Financial Support</h3>
+          <p>Fund programs, provide scholarships, or sponsor specific initiatives</p>
+        </div>
+        <div class="option">
+          <h3>🤝 Technical Expertise</h3>
+          <p>Share knowledge, provide training, or collaborate on research</p>
+        </div>
+        <div class="option">
+          <h3>🔗 Market Access</h3>
+          <p>Connect youth to buyers, supply chains, or employment opportunities</p>
+        </div>
+        <div class="option">
+          <h3>📢 Advocacy</h3>
+          <p>Promote agricultural youth development and policy change</p>
+        </div>
+      </div>
+
+      <div class="cta-buttons">
+        <a href="contact.html" class="btn-primary">Partner With Us</a>
+        <a href="#partnership-types" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <h2>Be part of the drivers<br />of Smart-Climate Change</h2>
+    <p>
+     Your involvement can drive change and transform lives. Partner with us, volunteer, or donate to help more 
+     in access of smart-climate change.
+    </p>
+    <a href="contact.html" class="btn-primary">Get Involved →</a>
+  </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <div class="footer-about">
+          <div class="brand">🌱 Farm Teens UG</div>
+          <p>Empowering Ugandan youth through modern, sustainable, and profitable agriculture. We cultivate the future of food.</p>
+          <div class="socials">
+            <a href="https://facebook.com/farmteensugandalimited" class="social-icon" target="_blank" rel="noopener" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/farmteensugandaltd" class="social-icon" target="_blank" rel="noopener" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/farm-teens-uganda-ltd-ftu" class="social-icon" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+            <li><a href="about.html">Organization Profile</a></li>
+            <li><a href="blog.html">Impact Stories</a></li>
+            <li><a href="programs.html">Training Materials</a></li>
+            <li><a href="contact.html">FAQ</a></li>
+            <li><a href="donate.html">Support</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong><br>
+              Kayunga Wakiso, Uganda
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+256756981336">+256 756 981 336</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:farmteensugandalimiited@gmail.com">farmteensugandalimiited@gmail.com</a>
+          </li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 14px; color: #ffffff; margin-bottom: 12px;">Newsletter</h4>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Get monthly tips and opportunities.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Farm Teens Uganda. All rights reserved.
+      </div>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>

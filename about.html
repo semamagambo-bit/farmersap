@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>About Us | Farm Teens Uganda</title>
+  <meta name="description" content="Learn about Farm Teens Uganda's mission to empower youth through climate-smart agriculture and innovative farming practices.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* About Page - unblurred background with sharp image visible
+       Scoped to .about-page so it only affects the about page */
+    .about-page {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+        url('images/abouttt.jpg');
+      background-size: cover, cover;
+      background-position: center center, center center;
+      background-attachment: fixed, fixed;
+      min-height: 100vh;
+    }
+
+    /* Make all sections on about page transparent to show background image */
+    .about-page .about-section,
+    .about-page .story-section,
+    .about-page .mv-section,
+    .about-page .impact-stats,
+    .about-page .team-section,
+    .about-page .about-cta {
+      background: transparent;
+      padding: 100px 60px;
+    }
+
+    /* Make section containers transparent */
+    .about-page .about-grid,
+    .about-page .story-grid,
+    .about-page .mv-grid,
+    .about-page .stats-container,
+    .about-page .team-grid,
+    .about-page .cta-content {
+      background: transparent;
+    }
+
+    /* Make cards and content blocks transparent */
+    .about-page .mv-card,
+    .about-page .stat-card,
+    .about-page .image-overlay,
+    .about-page .team-card {
+      background: rgba(0, 0, 0, 0.4);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+      backdrop-filter: blur(10px);
+      border-radius: 26px;
+      padding: 50px 30px;
+    }
+
+    .about-page .stat-card h3 {
+      font-size: 64px;
+      color: #22c55e;
+      margin-bottom: 12px;
+      font-weight: 800;
+    }
+
+    .about-page .stat-card p {
+      color: #ffffff;
+      font-weight: 600;
+      letter-spacing: 1px;
+      font-size: 16px;
+    }
+
+    /* Make all text white with shadows */
+    .about-page .about-section h2,
+    .about-page .about-section p,
+    .about-page .story-section h2,
+    .about-page .story-section p,
+    .about-page .mv-section h2,
+    .about-page .mv-section h3,
+    .about-page .mv-section p,
+    .about-page .impact-stats h2,
+    .about-page .impact-stats p,
+    .about-page .stat-card h3,
+    .about-page .stat-card p,
+    .about-page .image-overlay h4,
+    .about-page .image-overlay p,
+    .about-page .feature span,
+    .about-page .story-stats h4,
+    .about-page .story-stats p,
+    .about-page .timeline-content h4,
+    .about-page .timeline-content p,
+    .about-page .section-header h2,
+    .about-page .section-header p,
+    .about-page .card-icon,
+    .about-page .values-list span,
+    .about-page .team-section h2,
+    .about-page .team-section p,
+    .about-page .team-card h3,
+    .about-page .team-card p,
+    .about-page .team-role,
+    .about-page .about-cta h2,
+    .about-page .about-cta p {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      color: #ffffff;
+    }
+
+    /* About Hero Glow Effect */
+    .about-hero h1 {
+      text-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.6),
+        0 0 40px rgba(34, 197, 94, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.4),
+        0 0 80px rgba(34, 197, 94, 0.3),
+        0 3px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .about-hero p {
+      text-shadow: 
+        0 0 15px rgba(34, 197, 94, 0.5),
+        0 0 30px rgba(34, 197, 94, 0.3),
+        0 0 45px rgba(34, 197, 94, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="about-page">
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo: image + text for accessibility and branding -->
+    <!-- Replaced font icon with the original logo.png as requested -->
+    <a href="index.html" class="navbar-logo" aria-label="Farm Teens UG home">
+      <img src="images/logo.png" alt="Farm Teens UG logo" class="logo-img" />
+      <span class="logo-text" data-variants="Farm Teens Uganda|Teens Driving Change" aria-live="polite">Farm Teens UG</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html" class="active">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="partners.html">Partners</a>
+      <a href="blog.html">Blog</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="navbar-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-content">
+    <a href="index.html">Home</a>
+    <a href="about.html" class="active">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="partners.html">Partners</a>
+    <a href="blog.html">Blog</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <button class="mobile-nav-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+  </div>
+</nav>
+
+<!-- ABOUT HERO (split layout: left clean text, right image) -->
+<section class="about-hero split-hero">
+  <div class="about-hero-inner container">
+    <div class="about-hero-left">
+      <h1>Teens Driving Change Through <span class="highlight">Climate-Smart Agriculture</span></h1>
+      <p>
+        Farm Teens Uganda Limited is a non-profit organization dedicated to empowering 
+        teens and youth in Uganda through climate-smart agriculture. 
+      </p>
+
+      <div class="hero-stats">
+        <div class="stat">
+          <h3>500+</h3>
+          <p>Jobs Created</p>
+        </div>
+        <div class="stat">
+          <h3>150+</h3>
+          <p>Businesses Started</p>
+        </div>
+        <div class="stat">
+          <h3>10+</h3>
+          <p>Demo Farms</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="about-hero-right">
+      <img src="images/about-hero.jpg" alt="Youth farming" />
+    </div>
+  </div>
+</section>
+
+<!-- WHO WE ARE -->
+<section class="about-section">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-content">
+        <div class="section-header">
+          <span class="section-badge">WHO WE ARE</span>
+          <h2>Teens Driving Change</h2>
+        </div>
+        <p>
+          Farm Teens Uganda aims to address youth unemployment and climate change in Uganda
+          Particularly in rural areas where agriculture is a primary source of livelihood
+          by equipping young people with agricultural skills and entrepreneurship opportunities.
+        </p>
+        <p>
+          Farm Teens Uganda offers comprehensive training programs, mentorship, and support
+          we promote climate-smart agriculture practices and foster innovation,
+          Collaboration among youth and livelihoods to create a more sustainable and inclusive agricultural sectors.
+        </p>
+        <div class="about-features">
+          <div class="feature">
+            <i class="fas fa-seedling"></i>
+            <span>Climate-Smart Practices</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-lightbulb"></i>
+            <span>Innovation & Technology</span>
+          </div>
+          <div class="feature">
+            <i class="fas fa-users"></i>
+            <span>Youth Empowerment</span>
+          </div>
+        </div>
+      </div>
+      <div class="about-image">
+        <img src="images/about-who.jpg" alt="Farm Teens Uganda training youth">
+        <div class="image-overlay">
+          <div class="overlay-content">
+            <h4>Hands-On Learning</h4>
+            <p>Practical training in modern farming techniques</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MISSION VISION VALUES -->
+<section class="mv-section">
+  <div class="container">
+    <div class="mv-grid">
+      <div class="mv-card">
+        <div class="card-icon">
+          <i class="fas fa-bullseye"></i>
+        </div>
+        <h3>Our Mission</h3>
+        <p>
+         To create employment opportunities and foster sustainable practices in the agricultural sector.
+        </p>
+      </div>
+
+      <div class="mv-card">
+        <div class="card-icon">
+          <i class="fas fa-eye"></i>
+        </div>
+        <h3>Our Businees Model</h3>
+        <p>
+          Farm Teens Uganda’s business model includes revenue streams from training programs,
+          agribusiness support services, product sales, consulting grants and partnerships.
+          These revenue sources ensure financial Sustainability and support the organization growth and impact.
+        </p>
+      </div>
+
+      <div class="mv-card">
+        <div class="card-icon">
+          <i class="fas fa-heart"></i>
+        </div>
+        <h3>Our Values</h3>
+        <div class="values-list">
+          <span>Innovation</span>
+          <span>Sustainability</span>
+          <span>Integrity</span>
+          <span>Youth Empowerment</span>
+          <span>Community Impact</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- OUR STORY -->
+<section class="story-section">
+  <div class="container">
+    <div class="story-grid">
+      <div class="story-image">
+        <img src="images/about-story.jpg" alt="Youth farming project">
+        <div class="story-stats">
+          <div class="story-stat">
+            <h4>2019</h4>
+            <p>Founded</p>
+          </div>
+          <div class="story-stat">
+            <h4>45+</h4>
+            <p>Partners</p>
+          </div>
+          <div class="story-stat">
+            <h4>12</h4>
+            <p>Districts</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-content">
+        <div class="section-header">
+          <span class="section-badge">OUR STORY</span>
+          <h2>From Vision to Reality</h2>
+        </div>
+        <p>
+          Farm Teens Uganda was born from a simple yet powerful realization: Uganda's
+          agricultural sector needed a revolution, and young people were the perfect
+          catalysts for change. With 75% of our population under 30, we saw an
+          incredible opportunity to harness youthful energy and innovation.
+        </p>
+        <p>
+          What started as a small pilot program in Kampala has grown into a nationwide
+          movement, touching lives across 12 districts and training over 250 young
+          agripreneurs. From school gardens to commercial farms, we're proving that
+          agriculture can be both profitable and sustainable.
+        </p>
+        <div class="story-timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2019</h4>
+              <p>Founded with 20 youth in Kampala</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2021</h4>
+              <p>Expanded to 5 districts, launched climate-smart programs</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2023</h4>
+              <p>Reached 12 districts, 250+ youth trained</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-content">
+              <h4>2025</h4>
+              <p>Nationwide expansion and innovation hub launch</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT NUMBERS -->
+<section class="impact-stats">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Our Impact in Numbers</h2>
+      <p>Real results from our work transforming Uganda's agricultural landscape</p>
+    </div>
+    <div class="stats-container">
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3 data-target="250">0</h3>
+        <p>YOUTH TRAINED</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3 data-target="12">0</h3>
+        <p>COMMUNITIES REACHED</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-handshake"></i>
+        </div>
+        <h3 data-target="45">0</h3>
+        <p>PARTNERS</p>
+      </div>
+      <div class="stat-card">
+        <div class="stat-icon">
+          <i class="fas fa-chart-line"></i>
+        </div>
+        <h3 data-target="95">0</h3>
+        <p>SUCCESS RATE</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM SECTION -->
+<section class="team-section">
+  <div class="container">
+    <div class="section-header text-center">
+      <span class="section-badge">OUR TEAM</span>
+      <h2>Meet the Visionaries</h2>
+      <p>The Farm Teens Uganda team consists of passionate individuals
+        with expertise in agriculture,youth empowerment, marketing, finance, and technology.
+        Their diverse skills and experiences drive the organization's mission forward.
+      </p>
+    </div>
+    <div class="team-grid">
+      <div class="team-card">
+        <div class="team-image">
+          <img src="images/team-1.jpg" alt="Executive Director">
+        </div>
+        <div class="team-content">
+          <h3>Ssemujju Brian</h3>
+          <p class="team-role">Founder & President</p>
+          <p>Agronomist with 15+ years experience in sustainable agriculture and youth development. Also leads strategy, partnerships and training design to scale youth agribusiness.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img src="images/team-2.jpg" alt="Program Manager">
+        </div>
+        <div class="team-content">
+          <h3>Musisi Simon</h3>
+          <p class="team-role">Secretary</p>
+          <p>A mobilizer dedicated to expanding agricultural opportunities and specializing in youth entrepreneurship.</p>
+        </div>
+      </div>
+      <div class="team-card">
+        <div class="team-image">
+          <img src="images/team-3.jpg" alt="Tech Innovation Lead">
+        </div>
+        <div class="team-content">
+          <h3>Kakande Silver Eria</h3>
+          <p class="team-role">Tech Innovation Lead</p>
+          <p>Bringing AgriTech solutions to  farmers across Uganda.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA SECTION -->
+<section class="about-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Join Our Mission</h2>
+      <p>
+        Whether you're a young person ready to start your agricultural journey,
+        a partner looking to support youth development, or a donor passionate about
+        sustainable change—there's a place for you at Farm Teens Uganda.
+      </p>
+      <div class="cta-buttons">
+        <a href="get-involved.html" class="btn-primary">Get Involved</a>
+        <a href="contact.html" class="btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <h2>Be part of the drivers<br />of Smart-Climate Change</h2>
+    <p>
+     Your involvement can drive change and transform lives. Partner with us, volunteer, or donate to help more 
+     in access of smart-climate change.
+    </p>
+    <a href="contact.html" class="btn-primary">Get Involved →</a>
+  </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <div class="footer-about">
+          <div class="brand">🌱 Farm Teens UG</div>
+          <p>Empowering Ugandan youth through modern, sustainable, and profitable agriculture. We cultivate the future of food.</p>
+          <div class="socials">
+            <a href="https://facebook.com/farmteensugandalimited" class="social-icon" target="_blank" rel="noopener" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/farmteensugandaltd" class="social-icon" target="_blank" rel="noopener" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/farm-teens-uganda-ltd-ftu" class="social-icon" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Organization Profile</a></li>
+          <li><a href="blog.html">Impact Stories</a></li>
+          <li><a href="programs.html">Training Materials</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="donate.html">Support</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong><br>
+              Kayunga Wakiso, Uganda
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+256756981336">+256 756 981 336</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:farmteensugandalimiited@gmail.com">farmteensugandalimiited@gmail.com</a>
+          </li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 14px; color: #ffffff; margin-bottom: 12px;">Newsletter</h4>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Get monthly tips and opportunities.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Farm Teens Uganda. All rights reserved.
+      </div>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>

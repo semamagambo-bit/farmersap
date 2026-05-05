@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Programs | Farm Teens Uganda</title>
+  <meta name="description" content="Explore our comprehensive agricultural training programs designed to empower Ugandan youth with modern farming skills and entrepreneurial opportunities.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    /* Programs Page - unblurred background with sharp image visible
+       Scoped to .programs-page so it only affects the programs page */
+    .programs-page {
+      background-image: 
+        linear-gradient(rgba(0, 0, 0, 0.12), rgba(0, 0, 0, 0.12)),
+        url('images/programnaa.jpg');
+      background-size: cover, cover;
+      background-position: center center, center center;
+      background-attachment: fixed, fixed;
+      min-height: 100vh;
+    }
+
+    /* Make all sections on programs page transparent to show background image */
+    .programs-page .programs,
+    .programs-page .program-tracks,
+    .programs-page .track-section,
+    .programs-page .program-row,
+    .programs-page .program-features,
+    .programs-page .characteristics,
+    .programs-page .success-stories,
+    .programs-page .impact-stats,
+    .programs-page .footer-cta,
+    .programs-page .cta-section {
+      background: transparent;
+    }
+
+    /* Make section containers transparent */
+    .programs-page .program-content,
+    .programs-page .program-image,
+    .programs-page .stats-container,
+    .programs-page .bg-shape,
+    .programs-page .track-card,
+    .programs-page .feature-card,
+    .programs-page .story-card,
+    .programs-page .cta-content,
+    .programs-page .characteristics-container,
+    .programs-page .features-grid {
+      background: transparent !important;
+      box-shadow: none !important;
+    }
+
+    /* Force feature cards to be transparent with no background */
+    .programs-page .feature-card {
+      background: transparent !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Ensure feature card icons show properly */
+    .programs-page .feature-card .feature-icon {
+      background: transparent !important;
+      color: #ffffff !important;
+    }
+
+    /* Make all text white with shadows */
+    .programs-page .program-content h2,
+    .programs-page .program-content p,
+    .programs-page .program-content ul,
+    .programs-page .program-content li,
+    .programs-page .characteristics h2,
+    .programs-page .characteristics p,
+    .programs-page .feature-card h3,
+    .programs-page .feature-card p,
+    .programs-page .track h2,
+    .programs-page .track h3,
+    .programs-page .track p,
+    .programs-page .success-stories h2,
+    .programs-page .success-stories p,
+    .programs-page .impact-stats h2,
+    .programs-page .impact-stats p,
+    .programs-page .stat-card h3,
+    .programs-page .stat-card p,
+    .programs-page .footer-cta h2,
+    .programs-page .footer-cta p,
+    .programs-page .cta-section h2,
+    .programs-page .cta-section p,
+    .programs-page .track,
+    .programs-page .section-header h2,
+    .programs-page .section-header p {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5);
+      color: #ffffff;
+    }
+
+    /* Programs Hero Glow Effect */
+    .programs-hero h1 {
+      text-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.6),
+        0 0 40px rgba(34, 197, 94, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.4),
+        0 0 80px rgba(34, 197, 94, 0.3),
+        0 3px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .programs-hero p {
+      text-shadow: 
+        0 0 15px rgba(34, 197, 94, 0.5),
+        0 0 30px rgba(34, 197, 94, 0.3),
+        0 0 45px rgba(34, 197, 94, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body class="programs-page">
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo: image + text for accessibility and branding -->
+    <a href="index.html" class="navbar-logo" aria-label="Farm Teens UG home">
+      <img src="images/logo.png" alt="Farm Teens UG logo" class="logo-img" />
+      <span class="logo-text" data-variants="Farm Teens Uganda|Teens Driving Change" aria-live="polite">Farm Teens UG</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html" class="active">Programs</a>
+      <a href="partners.html">Partners</a>
+      <a href="blog.html">Blog</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="navbar-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html" class="active">Programs</a>
+    <a href="partners.html">Partners</a>
+    <a href="blog.html">Blog</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <button class="mobile-nav-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+  </div>
+</nav>
+
+<!-- PROGRAMS HERO -->
+<section class="programs-hero">
+  <video class="hero-video" autoplay muted loop playsinline preload="auto" poster="images/programs-hero.jpg">
+    <source src="videos/IMG_1945.mp4" type="video/mp4">
+    <source src="videos/IMG_1945.mp4" type="video/quicktime">
+    Your browser does not support the video tag.
+  </video>
+  <div class="hero-overlay"></div>
+  <div class="programs-hero-content">
+    <h1>Transforming Youth Through <span class="highlight">Agricultural Excellence</span></h1>
+    <p>
+      Our comprehensive training programs equip Ugandan youth with the skills,
+      knowledge, and resources needed to become successful agripreneurs in
+      today's smart-climate environment.
+    </p>
+    <div class="hero-actions">
+      <a href="#program-tracks" class="btn-primary">Explore Programs</a>
+      <a href="get-involved.html" class="btn-secondary">Apply Now</a>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM TRACKS -->
+<section id="program-tracks" class="program-tracks">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Our Programs</h2>
+      <p>Comprehensive pathways designed to drive change and build complete agricultural entrepreneurs</p>
+    </div>
+
+    <div class="tracks-grid">
+      <!-- TRACK 1: Smart Agribusiness -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">01</div>
+        </div>
+        <div class="track-content">
+          <h3>Coffee Growing</h3>
+          <p>
+           We empower youth and smallholder farmers with practical skills to grow better coffee, increase yields, and access premium markets locally and globally.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Climate-smart coffee cultivation and soil health management</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Improved seedlings & farm establishment techniques</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Post-harvest handling & quality control</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Value addition, branding & market access</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>10+</h4>
+              <span>coffeeProjects Completed</span>
+            </div>
+            <div class="stat">
+              <h4>80%</h4>
+              <span>improvement in coffee quality & yields</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-1.jpg" alt="Smart Agribusiness Training">
+        </div>
+      </div>
+
+      <!-- TRACK 2: Climate-Smart Farming -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">02</div>
+        </div>
+        <div class="track-content">
+          <h3>Vanilla Production</h3>
+          <p>
+           Master the art of vanilla growing, pollination, curing, and value addition for export markets.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Vanilla agronomy suited to Uganda’s climate and soils</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Disease and pest management for healthy vines</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Harvesting, curing & quality grading</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Value addition & market linkage for premium pricing</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>8+</h4>
+              <span>vanilla cultivation projects supported</span>
+            </div>
+            <div class="stat">
+              <h4>75%</h4>
+              <span>improvement in vanilla quality & farmer incomes</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-2.jpg" alt="Climate-Smart Farming">
+        </div>
+      </div>
+
+      <!-- TRACK 3: Value Addition Labs -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">03</div>
+        </div>
+        <div class="track-content">
+          <h3>Cocoa Production</h3>
+          <p>
+           Comprehensive training in cocoa cultivation, fermentation, and quality processing techniques.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Farm establishment & shade management for healthy cocoa trees</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Harvesting, fermentation & drying for premium bean quality</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Quality grading & storage to meet market standards</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Value addition & market linkage for better pricing</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>7+</h4>
+              <span>cocoa projects supported</span>
+            </div>
+            <div class="stat">
+              <h4>70%</h4>
+              <span>improvement in cocoa quality and farm productivity</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-3.jpg" alt="Cocoa Production">
+        </div>
+      </div>
+
+      <!-- TRACK 4: Youth Agripreneurship -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">04</div>
+        </div>
+        <div class="track-content">
+          <h3>Paddy Rice Farming</h3>
+          <p>
+            Equipping youth and smallholder farmers with modern paddy rice production skills for higher yields and sustainable incomes.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Land preparation & water management for efficient rice production</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Improved seed selection & transplanting techniques</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Harvesting, drying & post-harvest handling to reduce losses</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Value addition & market linkage for better returns</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>9+</h4>
+              <span>Startups Launched</span>
+            </div>
+            <div class="stat">
+              <h4>78%</h4>
+              <span>improvement in yields and farmer income</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-4.jpg" alt="Paddy Rice Farming">
+        </div>
+      </div>
+
+      <!-- TRACK 5: Digital Agriculture & Tech Innovation -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">05</div>
+        </div>
+        <div class="track-content">
+          <h3>Poultry Farming</h3>
+          <p>
+           Complete poultry management training covering breeds, housing, feeding, and disease prevention.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Poultry production systems suited to Uganda</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Housing design & biosecurity for healthy flocks</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Disease prevention, vaccination & parasite control</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Record keeping, costing & market linkage for profitable enterprises</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>12+</h4>
+              <span>poultry farming projects supported</span>
+            </div>
+            <div class="stat">
+              <h4>65%</h4>
+              <span>improvement in farmer income and flock survival rates</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-5.jpg" alt="Poultry Farming">
+        </div>
+      </div>
+
+      <!-- TRACK 6: Sustainable Supply Chain & Marketing -->
+      <div class="track-card">
+        <div class="track-header">
+          <div class="track-number">06</div>
+        </div>
+        <div class="track-content">
+          <h3>Goat Rearing</h3>
+          <p>
+           Our program promotes climate-smart and low-input goat production practices that improve animal health, boost growth and reproduction, and strengthen access to profitable markets.
+          </p>
+          <div class="track-features">
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Housing & grazing management for animal welfare and productivity</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Feeding strategies & fodder production using locally available resources</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Breeding, kidding & herd management for improved reproduction</span>
+            </div>
+            <div class="feature">
+              <i class="fas fa-check"></i>
+              <span>Value addition (meat, milk, skins & manure)</span>
+            </div>
+          </div>
+          <div class="track-stats">
+            <div class="stat">
+              <h4>8+</h4>
+              <span>Export Markets</span>
+            </div>
+            <div class="stat">
+              <h4>60%</h4>
+              <span>improvement in household income and herd productivity</span>
+            </div>
+          </div>
+        </div>
+        <div class="track-image">
+          <img src="images/programs-6.jpg" alt="Sustainable Supply Chain & Marketing">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM FEATURES -->
+<section class="program-features">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Characteristics of our Programs</h2>
+    <div class="features-grid">
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-users"></i>
+        </div>
+        <h3>Partnerships</h3>
+        <p>Learn from experienced agronomists, business leaders, and successful agripreneurs who guide your journey.</p>
+      </div>
+
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-tools"></i>
+        </div>
+        <h3>Youth Empowerment</h3>
+        <p>Practical, field-based learning with access to modern equipment, laboratories, and demonstration farms.</p>
+      </div>
+
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-hand-holding-usd"></i>
+        </div>
+        <h3>Financial Sustainability</h3>
+        <p>Access to startup capital, grants, and microfinance opportunities to launch your agricultural business.</p>
+      </div>
+
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-network-wired"></i>
+        </div>
+        <h3>Community engagement</h3>
+        <p>Direct connections to buyers, cooperatives, and export markets to ensure your products reach customers.</p>
+      </div>
+
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-graduation-cap"></i>
+        </div>
+        <h3>Certification</h3>
+        <p>Earn recognized certificates and qualifications that validate your skills and open doors to opportunities.</p>
+      </div>
+
+      <div class="feature-card" style="background:transparent!important; box-shadow:none!important; border:none!important;">
+        <div class="feature-icon">
+          <i class="fas fa-sync-alt"></i>
+        </div>
+        <h3>Ongoing Support</h3>
+        <p>Continuous mentorship, resources, and community support even after program completion.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SUCCESS STORIES -->
+<section class="success-stories">
+  <div class="container">
+    <div class="section-header text-center">
+      <h2>Success Stories</h2>
+      <p>Real stories from program compliants who transformed their lives through our training</p>
+    </div>
+
+    <div class="stories-grid">
+      <div class="story-card">
+        <div class="story-image">
+          <img src="images/success-1.jpg" alt="Success Story 1">
+        </div>
+        <div class="story-content">
+          <h3>From Student to CEO</h3>
+          <p>"Farm Teens gave me the skills and confidence to start my own goat business. Now I employ  youth."</p>
+          <div class="story-author">
+            <strong>Musisi Simon</strong>
+            <span> Program Alumni 2022</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-image">
+          <img src="images/success-2.jpg" alt="Success Story 2">
+        </div>
+        <div class="story-content">
+          <h3>Climate-Smart Pioneer</h3>
+          <p>"The climate-smart farming techniques I learned helped me adapt to changing weather patterns. My yields increased by 40% despite droughts."</p>
+          <div class="story-author">
+            <strong>Suspekt Leizor</strong>
+            <span>Program Alumni 2021</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="story-card">
+        <div class="story-image">
+          <img src="images/success-3.jpg" alt="Success Story 3">
+        </div>
+        <div class="story-content">
+          <h3>Value Addition Expert</h3>
+          <p>"Learning vanilla  production turned my vanilla farm into a profitable business. Now I produce and sell vanilla  across the world."</p>
+          <div class="story-author">
+            <strong>Grace Auma</strong>
+            <span>Program Volunteer 2023</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAM CTA -->
+<section class="program-cta">
+  <div class="container">
+    <div class="cta-content">
+      <h2>Ready to Start Your Agricultural Journey?</h2>
+      <p>
+        Join hundreds of Ugandan youth who are building successful careers in agriculture.
+        Our programs are designed to take you from beginner to business owner.
+      </p>
+      <div class="cta-buttons">
+        <a href="get-involved.html" class="btn-primary">Apply for a Program</a>
+        <a href="contact.html" class="btn-secondary">Learn More</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <h2>Be part of the drivers<br />of Smart-Climate Change</h2>
+    <p>
+     Your involvement can drive change and transform lives. Partner with us, volunteer, or donate to help more 
+     in access of smart-climate change.
+    </p>
+    <a href="contact.html" class="btn-primary">Get Involved →</a>
+  </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <div class="footer-about">
+          <div class="brand">🌱 Farm Teens UG</div>
+          <p>Empowering Ugandan youth through modern, sustainable, and profitable agriculture. We cultivate the future of food.</p>
+          <div class="socials">
+            <a href="https://facebook.com/farmteensugandalimited" class="social-icon" target="_blank" rel="noopener" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/farmteensugandaltd" class="social-icon" target="_blank" rel="noopener" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/farm-teens-uganda-ltd-ftu" class="social-icon" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Organization Profile</a></li>
+          <li><a href="blog.html">Impact Stories</a></li>
+          <li><a href="programs.html">Training Materials</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="donate.html">Support</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong><br>
+              Kayunga Wakiso, Uganda
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+256756981336">+256 756 981 336</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:farmteensugandalimiited@gmail.com">farmteensugandalimiited@gmail.com</a>
+          </li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 14px; color: #ffffff; margin-bottom: 12px;">Newsletter</h4>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Get monthly tips and opportunities.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Farm Teens Uganda. All rights reserved.
+      </div>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>

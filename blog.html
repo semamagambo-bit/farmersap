@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Blog | Farm Teens Uganda</title>
+  <meta name="description" content="Stay updated with the latest news, insights, and stories from Farm Teens Uganda. Discover agricultural innovation, youth success stories, and sustainable farming practices.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Blog Hero Glow Effect */
+    .blog-hero h1 {
+      text-shadow: 
+        0 0 20px rgba(34, 197, 94, 0.6),
+        0 0 40px rgba(34, 197, 94, 0.5),
+        0 0 60px rgba(34, 197, 94, 0.4),
+        0 0 80px rgba(34, 197, 94, 0.3),
+        0 3px 12px rgba(0, 0, 0, 0.4);
+    }
+
+    .blog-hero p {
+      text-shadow: 
+        0 0 15px rgba(34, 197, 94, 0.5),
+        0 0 30px rgba(34, 197, 94, 0.3),
+        0 0 45px rgba(34, 197, 94, 0.2),
+        0 2px 8px rgba(0, 0, 0, 0.3);
+    }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo: image + text for accessibility and branding -->
+    <a href="index.html" class="navbar-logo" aria-label="Farm Teens UG home">
+      <img src="images/logo.png" alt="Farm Teens UG logo" class="logo-img" />
+      <span class="logo-text" data-variants="Farm Teens Uganda|Teens Driving Change" aria-live="polite">Farm Teens UG</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="partners.html">Partners</a>
+      <a href="blog.html" class="active">Blog</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="navbar-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="partners.html">Partners</a>
+    <a href="blog.html" class="active">Blog</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html">Contact</a>
+    <button class="mobile-nav-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+  </div>
+</nav>
+
+<!-- BLOG HERO -->
+<section class="blog-hero">
+  <!-- Scattered Photo Background -->
+  <div class="scattered-photos-bg">
+    <img src="images/16b5e704a2e9b27090c85fab32606cb0.jpg" alt="photo" class="scattered-photo" style="--delay: 0s; --rotation: -8deg; --x: 5%; --y: 10%;">
+    <img src="images/1b385bf0874ce056b7dc0f6c5eb2cfe8.jpg" alt="photo" class="scattered-photo" style="--delay: 0.1s; --rotation: 12deg; --x: 85%; --y: 15%;">
+    <img src="images/1eb406ab75c5a100b075de2334710522.jpg" alt="photo" class="scattered-photo" style="--delay: 0.2s; --rotation: -5deg; --x: 15%; --y: 65%;">
+    <img src="images/221675410bb8f7797658ee86a5077833.jpg" alt="photo" class="scattered-photo" style="--delay: 0.3s; --rotation: 9deg; --x: 75%; --y: 70%;">
+    <img src="images/22f88a342a630680acb292ad7cf71e96.jpg" alt="photo" class="scattered-photo" style="--delay: 0.4s; --rotation: -10deg; --x: 40%; --y: 5%;">
+    <img src="images/2e8b9a12fc72b3edae665bfc17814570.jpg" alt="photo" class="scattered-photo" style="--delay: 0.5s; --rotation: 7deg; --x: 60%; --y: 75%;">
+    <img src="images/3a9fdc50a5908785f1912efa6351dee3.jpg" alt="photo" class="scattered-photo" style="--delay: 0.6s; --rotation: -12deg; --x: 10%; --y: 40%;">
+    <img src="images/3ce0b879c11db3a4fdb9179e76e5bd0d.jpg" alt="photo" class="scattered-photo" style="--delay: 0.7s; --rotation: 11deg; --x: 80%; --y: 45%;">
+    <img src="images/3d648e208130837ecb7bde9f5f557e32.jpg" alt="photo" class="scattered-photo" style="--delay: 0.8s; --rotation: -6deg; --x: 25%; --y: 25%;">
+    <img src="images/441bda8f1f967cddc2f3c22567d9a305.jpg" alt="photo" class="scattered-photo" style="--delay: 0.9s; --rotation: 8deg; --x: 65%; --y: 35%;">
+    <img src="images/4e3a3949246b82ba385edd64f3f7dbd9.jpg" alt="photo" class="scattered-photo" style="--delay: 1s; --rotation: -9deg; --x: 35%; --y: 55%;">
+    <img src="images/53fc07e2edcc693fbe79d586063978eb.jpg" alt="photo" class="scattered-photo" style="--delay: 1.1s; --rotation: 10deg; --x: 70%; --y: 20%;">
+    <img src="images/59daefdc23d01e484521ae7da355af65.jpg" alt="photo" class="scattered-photo" style="--delay: 1.2s; --rotation: -7deg; --x: 20%; --y: 80%;">
+    <img src="images/5a0ac29ce255f00d987c8f956bc3e419.jpg" alt="photo" class="scattered-photo" style="--delay: 1.3s; --rotation: 6deg; --x: 50%; --y: 45%;">
+    <img src="images/5c149f0efbcb2674b3f1f2bf8fddf202.jpg" alt="photo" class="scattered-photo" style="--delay: 1.4s; --rotation: -11deg; --x: 85%; --y: 60%;">
+    <img src="images/5f9f2ac8125b494374dadfd7d8b718fc.jpg" alt="photo" class="scattered-photo" style="--delay: 1.5s; --rotation: 9deg; --x: 15%; --y: 50%;">
+    <img src="images/60dc73774d49fe08366b9ea1e30cdcd8.jpg" alt="photo" class="scattered-photo" style="--delay: 1.6s; --rotation: -8deg; --x: 60%; --y: 55%;">
+    <img src="images/63689988216557dcba19c116edff42ad.jpg" alt="photo" class="scattered-photo" style="--delay: 1.7s; --rotation: 7deg; --x: 30%; --y: 70%;">
+    <img src="images/6800e33fec7537428da5dd8c241cbe6e.jpg" alt="photo" class="scattered-photo" style="--delay: 1.8s; --rotation: -10deg; --x: 75%; --y: 25%;">
+    <img src="images/6be94d0b5311af536ab5c31ba4856977.jpg" alt="photo" class="scattered-photo" style="--delay: 1.9s; --rotation: 8deg; --x: 45%; --y: 80%;">
+    <img src="images/73efc2ead33cac49ce15b165e9d31d39.jpg" alt="photo" class="scattered-photo" style="--delay: 2s; --rotation: -6deg; --x: 55%; --y: 15%;">
+    <img src="images/74311a03365ffd7981a1a2282b94cd29.jpg" alt="photo" class="scattered-photo" style="--delay: 2.1s; --rotation: 9deg; --x: 10%; --y: 25%;">
+    <img src="images/750fdc5ff041d9f5f0909873183fb2f5.jpg" alt="photo" class="scattered-photo" style="--delay: 2.2s; --rotation: -7deg; --x: 70%; --y: 80%;">
+    <img src="images/7645eda7805afaae50ad36317e49ae63.jpg" alt="photo" class="scattered-photo" style="--delay: 2.3s; --rotation: 11deg; --x: 25%; --y: 35%;">
+    <img src="images/7830d942c55ac9acbb9490d55c62716a.jpg" alt="photo" class="scattered-photo" style="--delay: 2.4s; --rotation: -9deg; --x: 65%; --y: 65%;">
+    <img src="images/832a2c039e228770bd2d2d5a9bb886d0.jpg" alt="photo" class="scattered-photo" style="--delay: 2.5s; --rotation: 8deg; --x: 35%; --y: 15%;">
+    <img src="images/868d49cfc2b560137b1c9db1ab90cb12.jpg" alt="photo" class="scattered-photo" style="--delay: 2.6s; --rotation: -8deg; --x: 80%; --y: 35%;">
+    <img src="images/86da73be6bac094594e88363e7fa33d2.jpg" alt="photo" class="scattered-photo" style="--delay: 2.7s; --rotation: 10deg; --x: 20%; --y: 60%;">
+    <img src="images/8b34ef3a7014b71451680a4e70454cb0.jpg" alt="photo" class="scattered-photo" style="--delay: 2.8s; --rotation: -6deg; --x: 50%; --y: 25%;">
+    <img src="images/8eea3e23f30e87c256cd21fd4debd1e8.jpg" alt="photo" class="scattered-photo" style="--delay: 2.9s; --rotation: 7deg; --x: 40%; --y: 70%;">
+    <img src="images/9981680f60869b810130f2efd8ba2d4b.jpg" alt="photo" class="scattered-photo" style="--delay: 3s; --rotation: -10deg; --x: 75%; --y: 50%;">
+    <img src="images/a3c082201c1530258ed98b1646f7f574.jpg" alt="photo" class="scattered-photo" style="--delay: 3.1s; --rotation: 9deg; --x: 15%; --y: 15%;">
+    <img src="images/a6468d4ea6c55aa059ff52df9441347a.jpg" alt="photo" class="scattered-photo" style="--delay: 3.2s; --rotation: -7deg; --x: 60%; --y: 70%;">
+    <img src="images/a8ffc870ad6d83731f29ff23b18b1a38.jpg" alt="photo" class="scattered-photo" style="--delay: 3.3s; --rotation: 8deg; --x: 30%; --y: 45%;">
+    <img src="images/afe23d914f1eafbf381baca2c1574867.jpg" alt="photo" class="scattered-photo" style="--delay: 3.4s; --rotation: -9deg; --x: 85%; --y: 70%;">
+    <img src="images/b040dd022077bae7072a0ab05fae229d.jpg" alt="photo" class="scattered-photo" style="--delay: 3.5s; --rotation: 6deg; --x: 25%; --y: 50%;">
+    <img src="images/b28390c35d71e82407b6d39d84d6dc87.jpg" alt="photo" class="scattered-photo" style="--delay: 3.6s; --rotation: -8deg; --x: 70%; --y: 40%;">
+    <img src="images/b7dd5504b6a44ebe7f266baba1707865.jpg" alt="photo" class="scattered-photo" style="--delay: 3.7s; --rotation: 11deg; --x: 35%; --y: 80%;">
+    <img src="images/b83ca7e23ca00bdca511017708c7330b.jpg" alt="photo" class="scattered-photo" style="--delay: 3.8s; --rotation: -6deg; --x: 50%; --y: 60%;">
+    <img src="images/be15b48d6ff8931b6b93241f8d3a4cc5.jpg" alt="photo" class="scattered-photo" style="--delay: 3.9s; --rotation: 10deg; --x: 20%; --y: 20%;">
+    <img src="images/cb55397c428c0f17279ae2e8f2edae46.jpg" alt="photo" class="scattered-photo" style="--delay: 4s; --rotation: -10deg; --x: 65%; --y: 15%;">
+    <img src="images/e11dc89326dbb4f2a6277feeff630d51.jpg" alt="photo" class="scattered-photo" style="--delay: 4.1s; --rotation: 7deg; --x: 45%; --y: 35%;">
+    <img src="images/e3709c5b14a6bb34a8ec132045928751.jpg" alt="photo" class="scattered-photo" style="--delay: 4.2s; --rotation: -9deg; --x: 80%; --y: 55%;">
+    <img src="images/ed43aa90d6553f9e617e31dbea77edc5.jpg" alt="photo" class="scattered-photo" style="--delay: 4.3s; --rotation: 8deg; --x: 10%; --y: 70%;">
+    <img src="images/eda53b28b8cbaa1cd6905ec27198f801.jpg" alt="photo" class="scattered-photo" style="--delay: 4.4s; --rotation: -7deg; --x: 55%; --y: 40%;">
+    <img src="images/f5ea070d158a6d8ecb01236a04c19a11.jpg" alt="photo" class="scattered-photo" style="--delay: 4.5s; --rotation: 6deg; --x: 75%; --y: 80%;">
+    <img src="images/fd43c2c2b13eef2d70036b59a4e01dba.jpg" alt="photo" class="scattered-photo" style="--delay: 4.6s; --rotation: -8deg; --x: 30%; --y: 15%;">
+    <img src="images/fe204796cbb56a06f9654d072dedd96a.jpg" alt="photo" class="scattered-photo" style="--delay: 4.7s; --rotation: 9deg; --x: 40%; --y: 50%;">
+    <img src="images/hero-youth-farming.jpg" alt="photo" class="scattered-photo" style="--delay: 4.8s; --rotation: -10deg; --x: 65%; --y: 25%;">
+    <img src="images/impact-story.jpg" alt="photo" class="scattered-photo" style="--delay: 4.9s; --rotation: 7deg; --x: 20%; --y: 40%;">
+    <img src="images/program-1.jpg" alt="photo" class="scattered-photo" style="--delay: 5s; --rotation: -6deg; --x: 85%; --y: 20%;">
+    <img src="images/program-2.jpg" alt="photo" class="scattered-photo" style="--delay: 5.1s; --rotation: 10deg; --x: 50%; --y: 70%;">
+    <img src="images/program-3.jpg" alt="photo" class="scattered-photo" style="--delay: 5.2s; --rotation: -9deg; --x: 10%; --y: 55%;">
+    <img src="images/program-4.jpg" alt="photo" class="scattered-photo" style="--delay: 5.3s; --rotation: 8deg; --x: 60%; --y: 10%;">
+    <img src="images/programs-1.jpg" alt="photo" class="scattered-photo" style="--delay: 5.4s; --rotation: -7deg; --x: 35%; --y: 40%;">
+    <img src="images/programs-2.jpg" alt="photo" class="scattered-photo" style="--delay: 5.5s; --rotation: 11deg; --x: 70%; --y: 55%;">
+    <img src="images/programs-3.jpg" alt="photo" class="scattered-photo" style="--delay: 5.6s; --rotation: -8deg; --x: 25%; --y: 70%;">
+    <img src="images/programs-4.jpg" alt="photo" class="scattered-photo" style="--delay: 5.7s; --rotation: 9deg; --x: 80%; --y: 10%;">
+    <img src="images/programs-5.jpg" alt="photo" class="scattered-photo" style="--delay: 5.8s; --rotation: -10deg; --x: 15%; --y: 80%;">
+    <img src="images/programs-6.jpg" alt="photo" class="scattered-photo" style="--delay: 5.9s; --rotation: 6deg; --x: 55%; --y: 50%;">
+  </div>
+
+  <div class="hero-overlay"></div>
+  <div class="blog-hero-content">
+    <h1>Insights & Stories from the <span class="highlight">Agricultural Frontier</span></h1>
+    <p>
+      Discover the latest trends, success stories, and expert insights
+      shaping the future of agriculture in Uganda and beyond.
+    </p>
+    <div class="blog-stats">
+      <div class="stat">
+        <h3>50+</h3>
+        <p>Articles Published</p>
+      </div>
+      <div class="stat">
+        <h3>15K+</h3>
+        <p>Monthly Readers</p>
+      </div>
+      <div class="stat">
+        <h3>25</h3>
+        <p>Expert Contributors</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLES - SOFT UI CARDS -->
+<section class="featured-articles-soft">
+  <div class="container">
+    <div class="section-header">
+      <h2>Latest Insights</h2>
+      <p>Discover our most recent stories and resources</p>
+    </div>
+    <div class="soft-cards-grid">
+      <div class="soft-card reveal">
+        <div class="card-image">
+          <img src="images/success-1.jpg" alt="Youth exhibition showcase">
+        </div>
+        <div class="card-content">
+          <h3>FTU Youth Shine at Regional Expo</h3>
+          <p>Youth-led exhibits showcased organic produce and climate-smart techniques.</p>
+          
+        </div>
+      </div>
+
+      <div class="soft-card reveal">
+        <div class="card-image">
+          <img src="images/program-1.jpg" alt="Water-efficient irrigation training">
+        </div>
+        <div class="card-content">
+          <h3>Training: Water-Efficient Irrigation</h3>
+          <p>A summary of our community training in Mukono district.</p>
+          
+        </div>
+      </div>
+
+      <div class="soft-card reveal">
+        <div class="card-image">
+          <img src="images/program-2.jpg" alt="Sustainable farming practices">
+        </div>
+        <div class="card-content">
+          <h3>Climate-Smart Farming Practices</h3>
+          <p>Learn how our youth are implementing sustainable techniques to combat climate change.</p>
+          
+        </div>
+      </div>
+
+      <div class="soft-card reveal">
+        <div class="card-image">
+          <img src="images/team-1.jpg" alt="Success story feature">
+        </div>
+        <div class="card-content">
+          <h3>From Zero to Hero: Success Stories</h3>
+          <p>Real stories of young farmers who transformed their lives through our programs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURED ARTICLE -->
+<section class="featured-article">
+  <div class="container">
+    <div class="featured-grid">
+      <div class="featured-content">
+        <div class="article-meta">
+          <span class="article-category">Success Stories</span>
+          <span class="article-date">December 15, 2024</span>
+        </div>
+        <h2>How One Youth Turned An Old Store into a Million-Income  Business</h2>
+        <p>
+          Meet Sarah Nakato, a 22-year-old agripreneur who transformed her family's
+          small old store to a thriving  business. Her journey showcases the
+          transformative power of our training programs and the potential of
+          Ugandan youth in agriculture.
+        </p>
+        <div class="article-stats">
+          <span><i class="fas fa-eye"></i> 2.5K views</span>
+          <span><i class="fas fa-comments"></i> 23 comments</span>
+          <span><i class="fas fa-share"></i> 156 shares</span>
+        </div>
+        
+      </div>
+      <div class="featured-image">
+        <img src="images/featured-article.jpg" alt="Sarah Nakato's farm">
+        <div class="image-overlay">
+          <div class="play-button">
+            <i class="fas fa-play"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Newsletter Section -->
+<section class="section" style="background: linear-gradient(135deg, rgba(34,197,94,0.1), rgba(16,185,129,0.1)), url('images/blogna.jpg') center/cover no-repeat; background-attachment: fixed; padding: 80px 20px; margin: 60px 0">
+  <div class="container">
+    <div class="card reveal" style="padding: clamp(48px, 8vw, 64px); text-align: center; max-width: 900px; margin: 0 auto; background: #f0fdf4; border-radius: 24px; border-top: 4px solid var(--primary-green)">
+      <h2 style="margin-bottom: 20px; color: #000; font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 700">
+        <i class="fas fa-envelope" style="color: var(--primary-green); margin-right: 12px; font-size: 1.1em"></i>Stay Updated
+      </h2>
+      <p style="font-size: 1.15rem; color: #4b5563; margin-bottom: 40px; line-height: 1.6; max-width: 600px; margin-left: auto; margin-right: auto">
+        Subscribe to our newsletter for the latest stories, program updates, and opportunities to get involved.
+      </p>
+      <form style="display: flex; gap: 16px; max-width: 600px; margin: 0 auto; flex-wrap: wrap; justify-content: center; align-items: stretch" onsubmit="event.preventDefault(); alert('Thank you for subscribing!');">
+        <input type="email" placeholder="Enter your email" required style="flex: 1; min-width: 250px; padding: 18px 24px; border: 2px solid #d1d5db; border-radius: 14px; font-size: 1rem; font-family: inherit; background: white; transition: all 0.3s ease; outline: none; box-shadow: 0 2px 8px rgba(0,0,0,0.05)" onfocus="this.style.borderColor='var(--primary-green)'; this.style.boxShadow='0 4px 12px rgba(34, 197, 94, 0.2)'" onblur="this.style.borderColor='#d1d5db'; this.style.boxShadow='0 2px 8px rgba(0,0,0,0.05)'">
+        <button type="submit" style="padding: 18px 48px; background: var(--primary-green); color: white; border: none; border-radius: 14px; font-size: 1.05rem; font-weight: 700; cursor: pointer; white-space: nowrap; transition: all 0.3s ease; display: flex; align-items: center; justify-content: center; gap: 10px; box-shadow: 0 4px 15px rgba(34, 197, 94, 0.3); min-height: 56px" onmouseover="this.style.background='#15b34d'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 6px 20px rgba(34, 197, 94, 0.4)'" onmouseout="this.style.background='var(--primary-green)'; this.style.transform='translateY(0)'; this.style.boxShadow='0 4px 15px rgba(34, 197, 94, 0.3)'">
+          <i class="fas fa-paper-plane"></i> Subscribe
+        </button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <h2>Be part of the drivers<br />of Smart-Climate Change</h2>
+    <p>
+     Your involvement can drive change and transform lives. Partner with us, volunteer, or donate to help more 
+     in access of smart-climate change.
+    </p>
+    <a href="contact.html" class="btn-primary">Get Involved →</a>
+  </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <div class="footer-about">
+          <div class="brand">🌱 Farm Teens UG</div>
+          <p>Empowering Ugandan youth through modern, sustainable, and profitable agriculture. We cultivate the future of food.</p>
+          <div class="socials">
+            <a href="https://facebook.com/farmteensugandalimited" class="social-icon" target="_blank" rel="noopener" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/farmteensugandaltd" class="social-icon" target="_blank" rel="noopener" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/farm-teens-uganda-ltd-ftu" class="social-icon" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Organization Profile</a></li>
+          <li><a href="blog.html">Impact Stories</a></li>
+          <li><a href="programs.html">Training Materials</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="donate.html">Support</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong><br>
+              Kayunga Wakiso, Uganda
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+256756981336">+256 756 981 336</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:farmteensugandalimiited@gmail.com">farmteensugandalimiited@gmail.com</a>
+          </li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 14px; color: #ffffff; margin-bottom: 12px;">Newsletter</h4>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Get monthly tips and opportunities.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Farm Teens Uganda. All rights reserved.
+      </div>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>

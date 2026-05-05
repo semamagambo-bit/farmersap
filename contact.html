@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Us | Farm Teens Uganda</title>
+  <meta name="description" content="Get in touch with Farm Teens Uganda. Contact us for inquiries about programs, partnerships, donations, or volunteering opportunities.">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="chatbot.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+  <style>
+    /* Contact Page - unblurred background with sharp image visible
+       Scoped to .contact-page so it only affects the contact page */
+    .contact-page {
+      background: url('images/contactaa.jpg');
+      background-size: cover;
+      background-position: center center;
+      background-attachment: fixed;
+      min-height: 100vh;
+      color: #ffffff;
+    }
+
+    /* Subtle dark overlay (max 15% opacity) for text readability */
+    .contact-page::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.12);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Reusable glass section - NO BLUR, NO GLASS - just transparent with overlay */
+    .glass-section {
+      position: relative;
+      background: transparent;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 2rem;
+      margin: 1rem 0;
+      color: #ffffff;
+      overflow: visible;
+    }
+
+    /* Hero section: text sits directly on background image */
+    .contact-hero.glass-section {
+      background: transparent;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      padding: 2.5rem;
+      transition: none;
+      will-change: auto;
+    }
+
+    /* Remove frosted overlay */
+    .contact-hero.glass-section::before {
+      display: none;
+    }
+
+    /* Remove sheen effect */
+    .glass-section::after {
+      display: none;
+    }
+
+    .glass-section.sheen-running::after {
+      animation: none;
+    }
+
+    @keyframes sheen-move {
+      0% { transform: rotate(-20deg) translateX(-100%); }
+      100% { transform: rotate(-20deg) translateX(100%); }
+    }
+
+    /* Text styling for readability on background image */
+    .glass-section h1, .glass-section h2, .glass-section h3, .glass-section p {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.3);
+      color: #ffffff;
+    }
+
+    /* Ensure content sits above the overlay */
+    .contact-hero .contact-hero-content { position: relative; z-index: 1; }
+
+    /* Allow inner hero overlay to be transparent */
+    .contact-hero .hero-overlay {
+      background: transparent !important;
+      background-image: none !important;
+      pointer-events: none;
+    }
+
+    /* Contact hero content transparent */
+    .contact-hero .contact-hero-content {
+      background: transparent;
+      padding: 0;
+    }
+
+    /* Contact Page Hero Text with strong shadow for readability */
+    .contact-hero .contact-hero-content h1 {
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0,0,0,0.5);
+      color: #ffffff;
+      font-weight: 700;
+    }
+
+    .contact-hero .contact-hero-content h1 .highlight {
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7), 0 2px 4px rgba(0,0,0,0.5);
+      color: #ffffff;
+    }
+
+    .contact-hero .contact-hero-content p {
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6), 0 1px 3px rgba(0,0,0,0.4);
+      color: #ffffff;
+      font-size: 1.05rem;
+    }
+
+    /* Method cards: no glass, just dark text shadow on background */
+    .contact-methods .method-card {
+      background: transparent;
+      -webkit-backdrop-filter: none;
+      backdrop-filter: none;
+      border: none;
+      box-shadow: none;
+      border-radius: 0;
+      padding: 1.4rem;
+      color: #ffffff;
+    }
+
+    .contact-methods .method-card h3,
+    .contact-methods .method-card p {
+      text-shadow: 0 2px 8px rgba(0,0,0,0.6), 0 1px 2px rgba(0,0,0,0.4);
+    }
+
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+      .contact-hero .contact-hero-content { padding: 1.5rem; border-radius: 0; }
+      .contact-methods .method-card { padding: 1rem; }
+    }
+
+    @media (max-width: 480px) {
+      .contact-hero .contact-hero-content { padding: 1rem; border-radius: 0; }
+      .contact-methods .method-card { padding: 0.9rem; }
+    }
+
+    /* No fallback needed - no backdrop-filter used */
+    @supports not ((-webkit-backdrop-filter: blur(1px)) or (backdrop-filter: blur(1px))) {
+      .glass-section,
+      .contact-hero .contact-hero-content,
+      .contact-methods .method-card {
+        background: transparent;
+      }
+    }
+
+    /* Hero styling without glass */
+    .contact-hero.hero-large {
+      padding: 3rem 2rem;
+      max-width: 1200px;
+      margin: 2.25rem auto;
+      border-radius: 0;
+      box-shadow: none;
+      position: relative;
+      overflow: visible;
+      background: transparent;
+    }
+
+    .contact-hero.hero-large .hero-inner {
+      display: grid;
+      grid-template-columns: 1fr 380px;
+      gap: 2rem;
+      align-items: center;
+    }
+
+    .contact-hero.hero-large h1 {
+      font-size: 2.25rem;
+      line-height: 1.05;
+      margin: 0 0 0.6rem 0;
+      color: #ffffff;
+      text-shadow: 0 4px 12px rgba(0, 0, 0, 0.7);
+    }
+
+    .contact-hero.hero-large .lead {
+      color: #ffffff;
+      margin-bottom: 1rem;
+      font-size: 1.05rem;
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.6);
+    }
+
+    .hero-ctas .btn { margin-right: 0.75rem; }
+
+    /* Remove noise background */
+    .hero-bg-noise {
+      display: none;
+    }
+
+    .glass-ring { display: none; }
+
+    @media (max-width: 900px) {
+      .contact-hero.hero-large .hero-inner { grid-template-columns: 1fr; }
+      .contact-hero.hero-large { padding: 2rem; }
+    }
+  </style>
+</head>
+<body class="contact-page">
+
+<!-- HEADER -->
+<header class="navbar">
+  <div class="navbar-container">
+    <!-- Logo: image + text for accessibility and branding -->
+   <a href="index.html" class="navbar-logo" aria-label="Farm Teens UG home">
+      <img src="images/logo.png" alt="Farm Teens UG logo" class="logo-img" />
+      <span class="logo-text" data-variants="Farm Teens Uganda|Teens Driving Change" aria-live="polite">Farm Teens UG</span>
+    </a>
+
+    <!-- Navigation Links -->
+    <nav class="navbar-nav">
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="programs.html">Programs</a>
+      <a href="partners.html">Partners</a>
+      <a href="blog.html">Blog</a>
+      <a href="get-involved.html">Get Involved</a>
+      <a href="contact.html" class="active">Contact</a>
+    </nav>
+
+    <!-- CTA Button -->
+    <button class="navbar-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+
+    <!-- Hamburger Menu -->
+    <button class="hamburger" id="hamburger" aria-label="Toggle navigation menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+</header>
+
+<!-- Mobile Navigation -->
+<nav class="mobile-nav" id="mobileNav">
+  <div class="mobile-nav-content">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="programs.html">Programs</a>
+    <a href="partners.html">Partners</a>
+    <a href="blog.html">Blog</a>
+    <a href="get-involved.html">Get Involved</a>
+    <a href="contact.html" class="active">Contact</a>
+    <button class="mobile-nav-cta" onclick="window.location.href='donate.html'">Donate Now</button>
+  </div>
+</nav>
+
+<!-- CONTACT HERO -->
+<section class="contact-hero glass-section hero-large" aria-label="Contact hero">
+  <div class="hero-bg-noise" aria-hidden="true"></div>
+  <div class="hero-inner contact-hero-content">
+    <div class="hero-text">
+      <h1>Reach Out — We're Here to Help</h1>
+      <p class="lead">Connect with Farm Teens Uganda for programs, partnerships, volunteering, or donations.</p>
+      <div class="hero-ctas">
+        <a class="btn btn-primary" href="#location">Visit Us</a>
+        <a class="btn btn-outline" href="mailto:farmteensugandalimiited@gmail.com">Email Us</a>
+      </div>
+      <div class="contact-stats" aria-hidden="true">
+        <div class="stat"><h3><i class="fas fa-clock"></i></h3><p>Response within 24 hours</p></div>
+        <div class="stat"><h3><i class="fas fa-users"></i></h3><p>Dedicated support team</p></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="glass-ring"></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT METHODS -->
+<section class="contact-methods glass-section">
+  <div class="container">
+    <div class="methods-grid">
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-envelope"></i>
+        </div>
+        <h3>Email Us</h3>
+        <p>Get detailed responses to your inquiries</p>
+        <div class="method-details">
+          <p><strong>General Inquiries:</strong> farmteensugandalimiited@gmail.com</p>
+          <p><strong>Programs:</strong> semujjubrian@farmteensuganda.org</p>
+        </div>
+        <a href="mailto:farmteensugandalimiited@gmail.com" class="method-link">Send Email</a>
+      </div>
+
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fab fa-whatsapp"></i>
+        </div>
+        <h3>WhatsApp</h3>
+        <p>Quick responses and instant support</p>
+        <div class="method-details">
+          <p><strong>Phone:</strong> +256 756 981 336</p>
+          <p><strong>Available:</strong> Mon-Fri, 9AM-6PM EAT</p>
+        </div>
+        <a href="https://wa.me/256756981336" class="method-link">Start Chat</a>
+      </div>
+
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-phone"></i>
+        </div>
+        <h3>Call Us</h3>
+        <p>Speak directly with our team</p>
+        <div class="method-details">
+          <p><strong>Main Line:</strong> +256 756 981 336</p>
+          <p><strong>Hours:</strong> Mon-Fri, 8AM-5PM EAT</p>
+        </div>
+        <a href="tel:+256756981336" class="method-link">Call Now</a>
+      </div>
+
+      <div class="method-card">
+        <div class="method-icon">
+          <i class="fas fa-map-marker-alt"></i>
+        </div>
+        <h3>Visit Us</h3>
+        <p>Meet us at our headquarters</p>
+        <div class="method-details">
+          <p><strong>Address:</strong>Kayunga Wakiso, Uganda</p>
+          <p><strong>City:</strong> Wakiso, Uganda</p>
+        </div>
+        <a href="#location" class="method-link">Get Directions</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!-- OFFICE LOCATION -->
+<section id="location" class="location-section glass-section">
+  <div class="container">
+    <div class="location-content">
+      <div class="location-info">
+        <div class="section-header">
+          <span class="section-badge">VISIT US</span>
+          <h2>Our Headquarters</h2>
+        </div>
+
+        <div class="office-details">
+          <div class="detail-item">
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <h4>Address</h4>
+              <p>Kayunga Wakiso, Uganda<br>Wakiso, Uganda<br></p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <i class="fas fa-clock"></i>
+            <div>
+              <h4>Office Hours</h4>
+              <p>Monday - Friday: 8:00 AM - 5:00 PM<br>Saturday: 9:00 AM - 1:00 PM<br>Sunday: Closed</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <i class="fas fa-parking"></i>
+            <div>
+              <h4>Parking</h4>
+              <p>Free parking available on premises<br>Street parking also available</p>
+            </div>
+          </div>
+
+          <div class="detail-item">
+            <i class="fas fa-subway"></i>
+            <div>
+              <h4>Public Transport</h4>
+              <p>Accessible by taxi, boda boda, and public buses<br>Nearest taxi park: Wakiso</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="office-features">
+          <h4>Facilities Available</h4>
+          <div class="features-grid">
+            <span><i class="fas fa-wifi"></i> Free WiFi</span>
+            <span><i class="fas fa-coffee"></i> Refreshments</span>
+            <span><i class="fas fa-wheelchair"></i> Wheelchair Accessible</span>
+            <span><i class="fas fa-language"></i> Multilingual Staff</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="location-map">
+        <iframe class="google-map-embed" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3989.7506622825496!2d32.58167!3d0.33194!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x177dbbfa6652bd33%3A0x7c7c8e8e8e8e8e8e!2sWandegeya%20Business%20Centre%2C%20Kampala!5e0!3m2!1sen!2sug!4v1612345678" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+// Contact page glass interactions: sheen control and mouse parallax
+(function(){
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  const glassSections = document.querySelectorAll('.glass-section');
+  if (!glassSections.length) return;
+
+  // Start sheen unless user prefers reduced motion
+  glassSections.forEach(el => {
+    if (!prefersReduced) el.classList.add('sheen-running');
+
+    // Pause on hover/focus for readability
+    el.addEventListener('mouseenter', () => el.classList.remove('sheen-running'));
+    el.addEventListener('mouseleave', () => { if (!prefersReduced) el.classList.add('sheen-running'); });
+    el.addEventListener('focusin', () => el.classList.remove('sheen-running'));
+    el.addEventListener('focusout', () => { if (!prefersReduced) el.classList.add('sheen-running'); });
+  });
+
+  // Parallax sheen follow on mousemove for the hero only
+  const hero = document.querySelector('.contact-hero');
+  if (hero && !prefersReduced) {
+    hero.addEventListener('mousemove', (e) => {
+      const rect = hero.getBoundingClientRect();
+      const x = ((e.clientX - rect.left) / rect.width) * 100; // 0..100
+      hero.style.setProperty('--sheen-x', (x - 50) + '%');
+    });
+    hero.addEventListener('mouseleave', () => hero.style.setProperty('--sheen-x','0%'));
+  }
+})();
+</script>
+
+
+<!-- FOOTER CTA -->
+<section class="footer-cta">
+  <div class="cta-content">
+    <h2>Be part of the drivers<br />of Smart-Climate Change</h2>
+    <p>
+     Your involvement can drive change and transform lives. Partner with us, volunteer, or donate to help more 
+     in access of smart-climate change.
+    </p>
+    <a href="contact.html" class="btn-primary">Get Involved →</a>
+  </div>
+</section>
+
+<!-- MAIN FOOTER -->
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-grid">
+      <!-- About Column -->
+      <div class="footer-column">
+        <div class="footer-about">
+          <div class="brand">🌱 Farm Teens UG</div>
+          <p>Empowering Ugandan youth through modern, sustainable, and profitable agriculture. We cultivate the future of food.</p>
+          <div class="socials">
+            <a href="https://facebook.com/farmteensugandalimited" class="social-icon" target="_blank" rel="noopener" title="Facebook">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="https://instagram.com/farmteensugandaltd" class="social-icon" target="_blank" rel="noopener" title="Instagram">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="https://linkedin.com/company/farm-teens-uganda-ltd-ftu" class="social-icon" target="_blank" rel="noopener" title="LinkedIn">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://twitter.com/Farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="Twitter">
+              <i class="fab fa-x-twitter"></i>
+            </a>
+            <a href="https://youtube.com/@farmteensuganda" class="social-icon" target="_blank" rel="noopener" title="YouTube">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Quick Links Column -->
+      <div class="footer-column">
+        <h3>Quick Links</h3>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Our Story</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="partners.html">Partners</a></li>
+          <li><a href="blog.html">Blog</a></li>
+          <li><a href="get-involved.html">Get Involved</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources Column -->
+      <div class="footer-column">
+        <h3>Resources</h3>
+        <ul class="footer-links">
+          <li><a href="about.html">Organization Profile</a></li>
+          <li><a href="blog.html">Impact Stories</a></li>
+          <li><a href="programs.html">Training Materials</a></li>
+          <li><a href="contact.html">FAQ</a></li>
+          <li><a href="donate.html">Support</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <!-- Contact Column -->
+      <div class="footer-column">
+        <h3>Get in Touch</h3>
+        <ul class="footer-contact">
+          <li>
+            <i class="fas fa-map-marker-alt"></i>
+            <div>
+              <strong>Address</strong><br>
+              Kayunga Wakiso, Uganda
+            </div>
+          </li>
+          <li>
+            <i class="fas fa-phone"></i>
+            <a href="tel:+256756981336">+256 756 981 336</a>
+          </li>
+          <li>
+            <i class="fas fa-envelope"></i>
+            <a href="mailto:farmteensugandalimiited@gmail.com">farmteensugandalimiited@gmail.com</a>
+          </li>
+        </ul>
+        <div style="margin-top: 20px;">
+          <h4 style="font-size: 14px; color: #ffffff; margin-bottom: 12px;">Newsletter</h4>
+          <p style="font-size: 13px; color: #9ca3af; margin-bottom: 12px;">Get monthly tips and opportunities.</p>
+          <form class="newsletter-form" onsubmit="return false;">
+            <input type="email" placeholder="Your email" aria-label="Email address" required />
+            <button type="submit">Subscribe</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer Divider -->
+    <div class="footer-divider"></div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+      <div class="footer-copyright">
+        © 2026 Farm Teens Uganda. All rights reserved.
+      </div>
+      <ul class="footer-legal">
+        <li><a href="privacy.html">Privacy Policy</a></li>
+        <li><a href="sitemap.html">Site Map</a></li>
+        <li><a href="cookie-policy.html">Cookie Policy</a></li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+<script src="chatbot.js"></script>
+<script>
+  if ('serviceWorker' in navigator) {
+    window.addEventListener('load', () => {
+      navigator.serviceWorker.register('service-worker.js')
+        .then(registration => console.log('Service Worker registered'))
+        .catch(err => console.log('Service Worker registration failed:', err));
+    });
+  }
+</script>
+</body>
+</html>
